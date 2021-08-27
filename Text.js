@@ -2,6 +2,13 @@ window.addEventListener("load", function()
 {
   var canvas = document.querySelector('#myCanvas'); 
   var ctx = canvas.getContext('2d'); 
+  const Dogimage = document.querySelector('#Dog1')
+  const Catimage = document.querySelector('#Cat1')
+  const Birdimage = document.querySelector('#Bird1')
+  const Lizardimage = document.querySelector('#Lizard1')
+
+  string = "False";
+  
 
   var mouse = {
     x: undefined,
@@ -12,7 +19,7 @@ window.addEventListener("load", function()
     mouse.x = event.x;
     mouse.y = event.y;
     console.log(mouse)
-    if ((mouse.x >= 90)&(mouse.x <= 420)&(mouse.y >= 646)&(mouse.y <= 727)) 
+    if ((mouse.x >= 90)&(mouse.x <= 420)&(mouse.y >= 546)&(mouse.y <= 627)) 
     {
       AnimalsHover();
     }
@@ -24,7 +31,7 @@ window.addEventListener("load", function()
   });  
   
   window.addEventListener('mousemove', function(event) {
-    if ((mouse.x >= 80)&(mouse.x <= 323)&(mouse.y >= 735)&(mouse.y <= 815)) 
+    if ((mouse.x >= 80)&(mouse.x <= 323)&(mouse.y >= 635)&(mouse.y <= 715)) 
     {
       AboutHover();
     }
@@ -36,7 +43,7 @@ window.addEventListener("load", function()
   });
 
   window.addEventListener('mousemove', function(event) {
-    if ((mouse.x >= 80)&(mouse.x <= 298)&(mouse.y >= 820)&(mouse.y <= 900)) 
+    if ((mouse.x >= 80)&(mouse.x <= 298)&(mouse.y >= 720)&(mouse.y <= 800)) 
     {
       NewsHover();
     }
@@ -48,7 +55,7 @@ window.addEventListener("load", function()
   });
 
   window.addEventListener('mousemove', function(event) {
-    if ((mouse.x >= 90)&(mouse.x <= 430)&(mouse.y >= 420)&(mouse.y <= 500)) 
+    if ((mouse.x >= 80)&(mouse.x <= 282)&(mouse.y >= 820)&(mouse.y <= 900)) 
     {
       Backhover();
     }
@@ -60,82 +67,146 @@ window.addEventListener("load", function()
   });
 
   canvas.addEventListener('click', function(event) {
-    if ((mouse.x >= 90)&(mouse.x <= 420)&(mouse.y >= 646)&(mouse.y <= 727)) 
+    if ((mouse.x >= 90)&(mouse.x <= 420)&(mouse.y >= 546)&(mouse.y <= 627)) 
     {
-      Dog();
-      Cat();
-      Bird();
-      Lizard();
+      StoreAnimals();
+      string = "true"
     }
   });
 
   canvas.addEventListener('click', function(event) {
-    if ((mouse.x >= 90)&(mouse.x <= 430)&(mouse.y >= 420)&(mouse.y <= 500)) 
+    if ((mouse.x >= 80)&(mouse.x <= 282)&(mouse.y >= 820)&(mouse.y <= 900)) 
     {
       resize();
     }
   });
 
+  canvas.addEventListener('click', function(event) {
+   if ((mouse.x >= 608)&(mouse.x <= 963)&(mouse.y >= 18)&(mouse.y <= 204)&(string == "true")) 
+   {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    resize();
+    StoreAnimals();
+    DrawDogs();
+   }
+  })
 
+  canvas.addEventListener('click', function(event) {
+    if ((mouse.x >= 606)&(mouse.x <= 906)&(mouse.y >= 217)&(mouse.y <= 404)&(string == "true")) 
+    {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      resize();
+      StoreAnimals();
+      DrawCats();
+    }
+  })
+
+  canvas.addEventListener('click', function(event) {
+    if ((mouse.x >= 608)&(mouse.x <= 976)&(mouse.y >= 420)&(mouse.y <= 601)&(string == "true")) 
+    {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      resize();
+      StoreAnimals();
+      DrawBirds();
+    }
+  })
+
+  canvas.addEventListener('click', function(event) {
+    if ((mouse.x >= 608)&(mouse.x <= 1130)&(mouse.y >= 619)&(mouse.y <= 801)&(string == "true")) 
+    {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      resize();
+      StoreAnimals();
+      DrawLizards();
+    }
+  })
+
+  function DrawDogs()
+  {
+    ctx.drawImage(Dogimage, 1400, 10, 500, 400);
+  }
+
+  function DrawCats()
+  {
+    ctx.drawImage(Catimage, 1400, 10, 500, 400);
+  }
+
+  function DrawBirds()
+  {
+    ctx.drawImage(Birdimage, 1400, 10, 500, 400);
+  }
+
+  function DrawLizards()
+  {
+    ctx.drawImage(Lizardimage, 1400, 10, 500, 400);
+  }
+
+  function StoreAnimals()
+  {
+    Dog();
+    Cat();
+    Bird();
+    Lizard();
+  }
 
   function Animals()
   {
     ctx.fillStyle = "white";
-    ctx.fillText("Animals", 90, 727);
+    ctx.fillText("Animals", 90, 627);
     ctx.strokeStyle = "white"; 
-    ctx.strokeText("Animals", 90, 727);  
+    ctx.strokeText("Animals", 90, 627);  
   }
 
   function Back()
   {
     ctx.fillStyle = "white";
-    ctx.fillText("Back", 90, 500);
+    ctx.fillText("Back", 80, 900);
     ctx.strokeStyle = "white"; 
-    ctx.strokeText("Back", 90, 500);
+    ctx.strokeText("Back", 80, 900);
   }
 
   function Backhover()
   {
     ctx.fillStyle = "purple";
-    ctx.fillText("Back", 90, 500);
+    ctx.fillText("Back", 80, 900);
     ctx.strokeStyle = "purple"; 
-    ctx.strokeText("Back", 90, 500);
+    ctx.strokeText("Back", 80, 900);
   }
 
   function AnimalsHover()
   {
     ctx.font = "100px fantasy"
     ctx.fillStyle = "purple";
-    ctx.fillText("Animals", 90, 727);
+    ctx.fillText("Animals", 90, 627);
   }
 
   function About()
   {
     ctx.fillStyle = "white";
-    ctx.fillText("About", 85, 815);
+    ctx.fillText("About", 85, 715);
     ctx.strokeStyle = "white"; 
-    ctx.strokeText("About", 85, 815)
+    ctx.strokeText("About", 85, 715)
   }
 
   function AboutHover()
   {
     ctx.font = "100px fantasy"
     ctx.fillStyle = "purple";
-    ctx.fillText("About", 85, 815);
+    ctx.fillText("About", 85, 715);
   }
 
   function News()
   {
     ctx.fillStyle = "white";
-    ctx.fillText("News", 80, 900);
+    ctx.fillText("News", 80, 800);
     ctx.strokeStyle = "white"; 
-    ctx.strokeText("News", 80, 900); 
+    ctx.strokeText("News", 80, 800); 
   }
 
   function NewsHover()
   {
     ctx.fillStyle = "purple";
-    ctx.fillText("News", 80, 900);
+    ctx.fillText("News", 80, 800);
   }
 
   function Dog()
@@ -191,14 +262,14 @@ window.addEventListener("load", function()
     About();
     News();
     Back();
-  }
+    }
  
- 
-
   window.addEventListener("resize", resize);
   resize(); 
 
 });
+
+
 
 
 //Original text sizes
