@@ -78,6 +78,7 @@ window.addEventListener("load", function()
     if ((mouse.x >= 80)&(mouse.x <= 282)&(mouse.y >= 820)&(mouse.y <= 900)) 
     {
       resize();
+      string = "false"
     }
   });
 
@@ -118,6 +119,13 @@ window.addEventListener("load", function()
       resize();
       StoreAnimals();
       DrawLizards();
+    }
+  })
+
+  canvas.addEventListener('click', function(event) {
+    if ((mouse.x >= 80)&(mouse.x <= 323)&(mouse.y >= 635)&(mouse.y <= 715))  
+    {
+     location.href = "About.html";
     }
   })
 
