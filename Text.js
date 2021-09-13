@@ -2,13 +2,29 @@ window.addEventListener("load", function()
 {
   var canvas = document.querySelector('#myCanvas'); 
   var ctx = canvas.getContext('2d'); 
-  const Dogimage = document.querySelector('#Dog1')
-  const Catimage = document.querySelector('#Cat1')
-  const Birdimage = document.querySelector('#Bird1')
-  const Lizardimage = document.querySelector('#Lizard1')
+  const Dogimage = document.querySelector('#Dog1');
+  const Catimage = document.querySelector('#Cat1');
+  const Birdimage = document.querySelector('#Bird1');
+  const Lizardimage = document.querySelector('#Lizard1');
+  let MenuStartHeight = 650;
+  let offsetHeight = 100;
+  let AnimalsStartHeight = 250;
+  let AnimaloffsetHeight = 200;
+
 
   string = "False";
   
+
+  function drawHover(txt, x, y){
+    ctx.font = "100px Fantasy";
+    ctx.fillStyle = "Purple";
+    ctx.fillText(txt, x, y);
+  } 
+
+  let MenuAnimalsH = ["Animals"];
+  let MenuAboutH = ["About"];
+  let MenuNewsH = ["News"];
+  let MenuBackH = ["Back"];
 
   var mouse = {
     x: undefined,
@@ -18,56 +34,68 @@ window.addEventListener("load", function()
   window.addEventListener('mousemove', function(event) {
     mouse.x = event.x;
     mouse.y = event.y;
-    console.log(mouse)
-    if ((mouse.x >= 90)&(mouse.x <= 420)&(mouse.y >= 546)&(mouse.y <= 627)) 
+    console.log(mouse);
+    if ((mouse.x >= 9)&(mouse.x <= 340)&(mouse.y >= 570)&(mouse.y <= 650)) 
     {
-      AnimalsHover();
+      MenuAnimalsH.forEach((s,i) => {
+        drawHover(s, 10, MenuStartHeight + (offsetHeight * i))
+      });
     }
     else
     {
       ctx.font = "100px fantasy"
-      Animals();
+      ctx.fillStyle = "white";
+      ctx.fillText("Animals", 9, 650);
     }
   });  
   
   window.addEventListener('mousemove', function(event) {
-    if ((mouse.x >= 80)&(mouse.x <= 323)&(mouse.y >= 635)&(mouse.y <= 715)) 
+    if ((mouse.x >= 9)&(mouse.x <= 241)&(mouse.y >= 671)&(mouse.y <= 749)) 
     {
-      AboutHover();
+      MenuAboutH.forEach((s,i) => {
+        drawHover(s, 10, MenuStartHeight + (offsetHeight * i) + 100)
+      });
     }
     else
     {
       ctx.font = "100px fantasy"
-      About();
+      ctx.fillStyle = "white";
+      ctx.fillText("About", 9, 749);
     }
   });
 
   window.addEventListener('mousemove', function(event) {
-    if ((mouse.x >= 80)&(mouse.x <= 298)&(mouse.y >= 720)&(mouse.y <= 800)) 
+    if ((mouse.x >= 9)&(mouse.x <= 228)&(mouse.y >= 770)&(mouse.y <= 850)) 
     {
-      NewsHover();
+      MenuNewsH.forEach((s,i) => {
+        drawHover(s, 10, MenuStartHeight + (offsetHeight * i) + 200)
+      });
     }
     else
     {
       ctx.font = "100px fantasy"
-      News();
+      ctx.fillStyle = "white";
+      ctx.fillText("News", 9, 850);
     }
   });
 
   window.addEventListener('mousemove', function(event) {
-    if ((mouse.x >= 80)&(mouse.x <= 282)&(mouse.y >= 820)&(mouse.y <= 900)) 
+    if ((mouse.x >= 9)&(mouse.x <= 213)&(mouse.y >= 870)&(mouse.y <= 950)) 
     {
-      Backhover();
+      MenuBackH.forEach((s,i) => {
+        drawHover(s, 10, MenuStartHeight + (offsetHeight * i) + 300)
+      });
     }
     else
     {
       ctx.font = "100px fantasy"
-      Back();
+      ctx.fillStyle = "white";
+      ctx.fillText("Back", 9, 950);
     }
   });
 
   canvas.addEventListener('click', function(event) {
-    if ((mouse.x >= 90)&(mouse.x <= 420)&(mouse.y >= 546)&(mouse.y <= 627)) 
+    if ((mouse.x >= 9)&(mouse.x <= 340)&(mouse.y >= 570)&(mouse.y <= 650)) 
     {
       StoreAnimals();
       string = "true"
@@ -75,7 +103,7 @@ window.addEventListener("load", function()
   });
 
   canvas.addEventListener('click', function(event) {
-    if ((mouse.x >= 80)&(mouse.x <= 282)&(mouse.y >= 820)&(mouse.y <= 900)) 
+    if ((mouse.x >= 9)&(mouse.x <= 213)&(mouse.y >= 870)&(mouse.y <= 950))
     {
       resize();
       string = "false"
@@ -83,7 +111,7 @@ window.addEventListener("load", function()
   });
 
   canvas.addEventListener('click', function(event) {
-   if ((mouse.x >= 608)&(mouse.x <= 963)&(mouse.y >= 18)&(mouse.y <= 204)&(string == "true")) 
+   if ((mouse.x >= 660)&(mouse.x <= 999)&(mouse.y >= 71)&(mouse.y <= 250)&(string == "true")) 
    {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     resize();
@@ -93,7 +121,7 @@ window.addEventListener("load", function()
   })
 
   canvas.addEventListener('click', function(event) {
-    if ((mouse.x >= 606)&(mouse.x <= 906)&(mouse.y >= 217)&(mouse.y <= 404)&(string == "true")) 
+    if ((mouse.x >= 660)&(mouse.x <= 957)&(mouse.y >= 267)&(mouse.y <= 454)&(string == "true")) 
     {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       resize();
@@ -103,7 +131,7 @@ window.addEventListener("load", function()
   })
 
   canvas.addEventListener('click', function(event) {
-    if ((mouse.x >= 608)&(mouse.x <= 976)&(mouse.y >= 420)&(mouse.y <= 601)&(string == "true")) 
+    if ((mouse.x >= 660)&(mouse.x <= 1027)&(mouse.y >= 472)&(mouse.y <= 650)&(string == "true")) 
     {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       resize();
@@ -113,7 +141,7 @@ window.addEventListener("load", function()
   })
 
   canvas.addEventListener('click', function(event) {
-    if ((mouse.x >= 608)&(mouse.x <= 1130)&(mouse.y >= 619)&(mouse.y <= 801)&(string == "true")) 
+    if ((mouse.x >= 660)&(mouse.x <= 1180)&(mouse.y >= 671)&(mouse.y <= 850)&(string == "true")) 
     {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       resize();
@@ -123,7 +151,7 @@ window.addEventListener("load", function()
   })
 
   canvas.addEventListener('click', function(event) {
-    if ((mouse.x >= 80)&(mouse.x <= 323)&(mouse.y >= 635)&(mouse.y <= 715))  
+    if ((mouse.x >= 8)&(mouse.x <= 246)&(mouse.y >= 670)&(mouse.y <= 749))  
     {
      location.href = "About.html";
     }
@@ -149,108 +177,19 @@ window.addEventListener("load", function()
     ctx.drawImage(Lizardimage, 1400, 10, 500, 400);
   }
 
+  function drawAnimals(txt, x, y){
+    ctx.font = "225px Fantasy";
+    ctx.fillStyle = "white";
+    ctx.fillText(txt, x, y);
+  }
+  
+  let Animals = ["Dog", "Cat", "Bird","Lizard"];
+
   function StoreAnimals()
   {
-    Dog();
-    Cat();
-    Bird();
-    Lizard();
-  }
-
-  function Animals()
-  {
-    ctx.fillStyle = "white";
-    ctx.fillText("Animals", 90, 627);
-    ctx.strokeStyle = "white"; 
-    ctx.strokeText("Animals", 90, 627);  
-  }
-
-  function Back()
-  {
-    ctx.fillStyle = "white";
-    ctx.fillText("Back", 80, 900);
-    ctx.strokeStyle = "white"; 
-    ctx.strokeText("Back", 80, 900);
-  }
-
-  function Backhover()
-  {
-    ctx.fillStyle = "purple";
-    ctx.fillText("Back", 80, 900);
-    ctx.strokeStyle = "purple"; 
-    ctx.strokeText("Back", 80, 900);
-  }
-
-  function AnimalsHover()
-  {
-    ctx.font = "100px fantasy"
-    ctx.fillStyle = "purple";
-    ctx.fillText("Animals", 90, 627);
-  }
-
-  function About()
-  {
-    ctx.fillStyle = "white";
-    ctx.fillText("About", 85, 715);
-    ctx.strokeStyle = "white"; 
-    ctx.strokeText("About", 85, 715)
-  }
-
-  function AboutHover()
-  {
-    ctx.font = "100px fantasy"
-    ctx.fillStyle = "purple";
-    ctx.fillText("About", 85, 715);
-  }
-
-  function News()
-  {
-    ctx.fillStyle = "white";
-    ctx.fillText("News", 80, 800);
-    ctx.strokeStyle = "white"; 
-    ctx.strokeText("News", 80, 800); 
-  }
-
-  function NewsHover()
-  {
-    ctx.fillStyle = "purple";
-    ctx.fillText("News", 80, 800);
-  }
-
-  function Dog()
-  {
-    ctx.font = "225px Fantasy";
-    ctx.fillStyle = "white";
-    ctx.fillText("DOG", 600, 200);
-    ctx.strokeStyle = "white"; 
-    ctx.strokeText("DOG", 600, 200); 
-  }
-
-  function Cat()
-  {
-    ctx.font = "225px Fantasy";
-    ctx.fillStyle = "white";
-    ctx.fillText("Cat", 600, 400);
-    ctx.strokeStyle = "white"; 
-    ctx.strokeText("Cat", 600, 400); 
-  }
-
-  function Bird()
-  {
-    ctx.font = "225px Fantasy";
-    ctx.fillStyle = "white";
-    ctx.fillText("Bird", 600, 600);
-    ctx.strokeStyle = "white"; 
-    ctx.strokeText("Bird", 600, 600); 
-  }
-
-  function Lizard()
-  {
-    ctx.font = "225px Fantasy";
-    ctx.fillStyle = "white";
-    ctx.fillText("Lizard", 600, 800);
-    ctx.strokeStyle = "white"; 
-    ctx.strokeText("Lizard", 600, 800); 
+    Animals.forEach((s,i) => {
+      drawAnimals(s, 650, AnimalsStartHeight + (AnimaloffsetHeight * i))
+    });
   }
 
   function draw()
@@ -261,21 +200,31 @@ window.addEventListener("load", function()
     ctx.stroke();
   }
 
-    function resize()
+  function drawMenu(txt, x, y){
+    ctx.font = "100px Fantasy";
+    ctx.fillStyle = "white";
+    ctx.fillText(txt, x, y);
+  }
+  
+  let Menu = ["Animals", "About", "News","Back"];
+
+  function resize()
   {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     draw();
-    Animals();
-    About();
-    News();
-    Back();
+
+    Menu.forEach((s,i) => {
+      drawMenu(s, 10, MenuStartHeight + (offsetHeight * i))
+    });
+
     }
  
   window.addEventListener("resize", resize);
   resize(); 
 
 });
+
 
 
 
