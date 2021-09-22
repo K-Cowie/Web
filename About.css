@@ -9,10 +9,16 @@ p {
     text-align: center;
 }
 
-img{
+.about2{
     position: relative;
     left: 1600px;
-    top: 250px;
+    top: -200px;
+}
+
+.about1{
+    position: relative;
+    left: 1600px;
+    top: -200px;
 }
 
 .button{
@@ -23,7 +29,7 @@ img{
     border: 2px solid black;
     width: 200px;
     height: 100px;
-    margin-top: 110px;
+    margin-top: -400px;
 }
 
 .button:hover{
