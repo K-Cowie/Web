@@ -29,11 +29,29 @@ p {
     border: 2px solid black;
     width: 200px;
     height: 100px;
-    margin-top: -400px;
+    margin-top: -600px;
 }
 
 .button:hover{
     background-color: black;
     color: white;
     transition-duration: 0.4s;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-left{
+   margin-left: 50px;
+}
+
+.footer-middle {
+    margin-left: 400px;
 }
