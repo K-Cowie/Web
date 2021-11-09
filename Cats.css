@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px repeat(5, 1fr) 100px;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container div {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+
+.Cats {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.Lucy {
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+    grid-column-start: 1;
+    grid-column-end: 2; 
+}
+
+.Lucypic {
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.Backtomain {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}

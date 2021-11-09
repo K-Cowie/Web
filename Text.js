@@ -32,7 +32,7 @@ window.addEventListener("load", function()
 
   let MenuAnimalsH = ["Animals"];
   let MenuAboutH = ["About"];
-  let MenuNewsH = ["News"];
+  let MenuNewsH = ["Adoption Page"];
   let MenuBackH = ["Back"];
 
   var mouse = {
@@ -70,7 +70,7 @@ window.addEventListener("load", function()
       ctx.fillText("About", 9, 749);
     }
 
-    if ((mouse.x >= 9)&(mouse.x <= 228)&(mouse.y >= 770)&(mouse.y <= 850)) 
+    if ((mouse.x >= 9)&(mouse.x <= 595)&(mouse.y >= 770)&(mouse.y <= 850)) 
     {
       MenuNewsH.forEach((s,i) => {
         drawHover(s, 10, MenuStartHeight + (offsetHeight * i) + 200)
@@ -80,7 +80,7 @@ window.addEventListener("load", function()
     {
       ctx.font = "100px fantasy"
       ctx.fillStyle = "white";
-      ctx.fillText("News", 9, 850);
+      ctx.fillText("Adoption Page", 9, 850);
     }
 
     if ((mouse.x >= 9)&(mouse.x <= 213)&(mouse.y >= 870)&(mouse.y <= 950)) 
@@ -152,6 +152,11 @@ window.addEventListener("load", function()
    {
     location.href = "About.html";
    }
+
+   if ((mouse.x >= 8)&(mouse.x <= 595)&(mouse.y >= 770)&(mouse.y <= 850))  
+   {
+    location.href = "Dogs.html";
+   }
   });
 
   function DrawDogs()
@@ -207,7 +212,7 @@ window.addEventListener("load", function()
     ctx.fillText(txt, x, y);
   }
   
-  let Menu = ["Animals", "About", "News","Back"];
+  let Menu = ["Animals", "About", "Adoption Page","Back"];
 
   function resize()
   {
