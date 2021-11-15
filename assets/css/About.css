@@ -17,8 +17,8 @@ p {
 
 .about1{
     position: relative;
-    left: 1600px;
-    top: -200px;
+    left: -20px;
+    top: -500px;
 }
 
 .button{
@@ -54,4 +54,9 @@ p {
 
 .footer-middle {
     margin-left: 400px;
+}
+
+#facts {
+    margin-bottom: 100px;
+    font-size: 25px;
 }

@@ -30,6 +30,7 @@ window.addEventListener("load", function()
     ctx.fillText(txt, x, y);
   } 
 
+  
   let MenuAnimalsH = ["Animals"];
   let MenuAboutH = ["About"];
   let MenuNewsH = ["Adoption Page"];
@@ -67,7 +68,7 @@ window.addEventListener("load", function()
     {
       ctx.font = "100px fantasy"
       ctx.fillStyle = "white";
-      ctx.fillText("About", 9, 749);
+      ctx.fillText("About", 9, 750);
     }
 
     if ((mouse.x >= 9)&(mouse.x <= 595)&(mouse.y >= 770)&(mouse.y <= 850)) 

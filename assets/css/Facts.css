@@ -1,0 +1,49 @@
+.fact_gen {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+.fact_gen2 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+.back {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 300px;
+  }
+
+h1 {
+      font-size: 50px;
+  }
+
+h2 {
+    font-size: 50px;
+}
+
+.fact {
+      font-size: 25px;
+  }
+
+.fact2 {
+    font-size: 25px;
+}
