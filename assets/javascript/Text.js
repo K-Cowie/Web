@@ -151,12 +151,12 @@ window.addEventListener("load", function()
 
    if ((mouse.x >= 8)&(mouse.x <= 246)&(mouse.y >= 670)&(mouse.y <= 749))  
    {
-    location.href = "About.html";
+    location.href = "/About";
    }
 
    if ((mouse.x >= 8)&(mouse.x <= 595)&(mouse.y >= 770)&(mouse.y <= 850))  
    {
-    location.href = "Dogs.html";
+    location.href = "/Dogs";
    }
   });
 
