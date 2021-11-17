@@ -1,5 +1,6 @@
+/* Styling the buttons */
 .fact_gen {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -10,7 +11,7 @@
   }
 
 .fact_gen2 {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -21,7 +22,7 @@
   }
 
 .back {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 15px 32px;

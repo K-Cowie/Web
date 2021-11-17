@@ -1,7 +1,7 @@
 body {
     margin: 0;
 }
-
+ /* Setting up the gridding on the page this the same on all pages using this css */
 .container {
     width: 100vw;
     height: 100vh;
@@ -22,7 +22,7 @@ body {
     border: 1px solid black;
 }
 
-
+/* All the positions of the contents */
 .Name {
     grid-column-start: 1;
     grid-column-end: 2;

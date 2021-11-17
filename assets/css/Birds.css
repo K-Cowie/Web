@@ -23,7 +23,7 @@ body {
     border: 1px solid black;
 }
 
-
+/* All the positions of the contents */
 .Birds {
     
     grid-column-start: 1;

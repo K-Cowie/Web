@@ -24,13 +24,14 @@ window.addEventListener("load", function()
   string = "False";
   
 
+  //Function that will change text color when hovered over
   function drawHover(txt, x, y){
     ctx.font = "100px Fantasy";
     ctx.fillStyle = "Purple";
     ctx.fillText(txt, x, y);
   } 
 
-  
+  //setting up what will be drawn to screen
   let MenuAnimalsH = ["Animals"];
   let MenuAboutH = ["About"];
   let MenuNewsH = ["Adoption Page"];
@@ -41,10 +42,10 @@ window.addEventListener("load", function()
     y: undefined
   }
 
+  //This is an mouse move event that causes the color change when hovering over the text and will draw it normal when not hovering.
   window.addEventListener('mousemove', function(event) {
     mouse.x = event.x;
     mouse.y = event.y;
-    console.log(mouse);
     if ((mouse.x >= 9)&(mouse.x <= 340)&(mouse.y >= 570)&(mouse.y <= 650)) 
     {
       MenuAnimalsH.forEach((s,i) => {
@@ -101,7 +102,9 @@ window.addEventListener("load", function()
 
 
 
-
+  //This is a click event that when clicking on the text will cause more text to pop up then
+  //it will cause the string to be true which will allow you to click on more text to cause pictures to show
+  //Also has where the text and pictures will be drawn to screen
   canvas.addEventListener('click', function(event) {
     if ((mouse.x >= 9)&(mouse.x <= 340)&(mouse.y >= 570)&(mouse.y <= 650)) 
     {
@@ -160,6 +163,8 @@ window.addEventListener("load", function()
    }
   });
 
+
+  //Drawing images
   function DrawDogs()
   {
     ctx.drawImage(Dogimage, 1400, 10, 500, 450);
@@ -190,6 +195,8 @@ window.addEventListener("load", function()
     ctx.fillText(txt, x, y);
   }
   
+
+  //What will pop up once animals has been clicked
   let Animals = ["Dog", "Cat", "Bird","Lizard"];
 
   function StoreAnimals()
@@ -215,6 +222,8 @@ window.addEventListener("load", function()
   
   let Menu = ["Animals", "About", "Adoption Page","Back"];
 
+
+  //draws the inital canvas to the screen that allows all the other text to be drawn on top
   function resize()
   {
     canvas.width = window.innerWidth;
@@ -231,35 +240,3 @@ window.addEventListener("load", function()
   resize(); 
 
 });
-
-
-
-
-
-//Original text sizes
-//ctx.font = "250px Fantasy";
-//ctx.fillStyle = "white";
-//ctx.fillText("Animals", 100, 500);
-//ctx.strokeStyle = "white"; 
-//ctx.strokeText("Animals", 100, 500);
-
-//ctx.fillStyle = "white";
-//ctx.fillText("About", 90, 700);
-//ctx.strokeStyle = "white"; 
-//ctx.strokeText("About", 90, 700);  
-
-//ctx.fillStyle = "white";
-//ctx.fillText("News", 80, 900);
-//ctx.strokeStyle = "white"; 
-//ctx.strokeText("News", 80, 900); 
-
-//After click sizing
-//ctx.fillStyle = "white";
-//ctx.fillText("About", 85, 815);
-//ctx.strokeStyle = "white"; 
-//ctx.strokeText("About", 85, 815)
-
-//ctx.fillStyle = "white";
-//ctx.fillText("Animals", 90, 727);
-//ctx.strokeStyle = "white"; 
-//ctx.strokeText("Animals", 90, 727)

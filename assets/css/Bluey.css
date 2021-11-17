@@ -23,7 +23,7 @@ body {
     border: 1px solid black;
 }
 
-
+/* All the positions of the contents */
 .Name {
     grid-column-start: 1;
     grid-column-end: 2;

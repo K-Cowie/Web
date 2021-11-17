@@ -9,6 +9,7 @@ p {
     text-align: center;
 }
 
+/* Images styling */
 .about2{
     position: relative;
     left: 1600px;
@@ -20,7 +21,7 @@ p {
     left: -20px;
     top: -500px;
 }
-
+ /* Styles button and makes it so when you hover over it make the button and text change color */
 .button{
     border-radius: 50%;
     font-size: 50px;
@@ -38,6 +39,8 @@ p {
     transition-duration: 0.4s;
 }
 
+
+/* css for all the footers this is never different */
 .footer {
     position: absolute;
     left: 0;
