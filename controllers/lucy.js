@@ -1,1 +1,1 @@
-exports.get = (req, res) =>  res.render('Lucy',{title:"lucy"})
+exports.get = (req, res) =>  res.render('Lucy',{title:"lucy", css:"Lucy"})
