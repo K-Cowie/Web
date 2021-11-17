@@ -1,7 +1,7 @@
 # This is how you run the web site locally
 
 ## Things you will need
-[Node.js](https://nodejs.org/en/) At least version 10
+[Node.js](https://nodejs.org/en/) At least version 10 ---
 [VsCode](https://code.visualstudio.com/) To see code and run commands in the terminal
  
 ### Step one
