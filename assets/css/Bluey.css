@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    background-color: pink;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 1fr 1fr 100px;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container div {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+
+.Name {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.picture {
+    grid-row-start: 2;
+    grid-row-end: span 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.picture2 {
+    grid-row-start: 2;
+    grid-row-end: span 2;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.aboutAnimal {
+    grid-row-start: 2;
+    grid-row-end: span 2;
+
+}
+
+.Back {
+    grid-row-start: 4;
+    grid-row-end: 4;
+
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 25px;
+}
+
+.footer-left{
+   margin-left: 50px;
+}
+
+.footer-middle {
+    margin-left: 400px;
+}

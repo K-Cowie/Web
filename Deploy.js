@@ -56,5 +56,20 @@ const birds_router = require('./routes/birds')
 
 app.use("/birds", birds_router)
 
+//
+const bluey_router = require('./routes/bluey')
+
+app.use("/bluey", bluey_router)
+
+//
+const nancy_router = require('./routes/nancy')
+
+app.use("/nancy", nancy_router)
+
+//
+const lucy_router = require('./routes/lucy')
+
+app.use("/lucy", lucy_router)
+
 
 app.listen(port, () => console.log(`Listening on port ${port}!`))

@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: pink;
 }
 
 .container {
@@ -36,21 +37,17 @@ body {
     grid-column-end: 2; 
 }
 
-.Baxter1 {
+.Nancy {
     grid-row-start: 3;
     grid-row-end: 3;
 
     grid-column-start: 1;
     grid-column-end: 2; 
+
+    height: 50%;
 }
 
-.Baxter2 {
-    grid-row-start: 4;
-    grid-row-end: 4;
 
-    grid-column-start: 1;
-    grid-column-end: 2; 
-}
 
 .Baxterpic {
     grid-row-start: 2;
@@ -60,20 +57,14 @@ body {
     grid-column-end: 3;
 }
 
-.Baxterpic1 {
+.Nancypic {
     grid-row-start: 3;
     grid-row-end: 3;
 
     grid-column-start: 2;
     grid-column-end: 3;
-}
 
-.Baxterpic2{
-    grid-row-start: 4;
-    grid-row-end: 4;
-
-    grid-column-start: 2;
-    grid-column-end: 3;
+    height: 50%;
 }
 
 
